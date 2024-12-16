@@ -20,8 +20,10 @@ app.use(
 
 // Routes import
 import authRoutes from "./routes/auth.routes.js";
+import taskRoutes from "./routes/tasks.routes.js";
 
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/tasks", taskRoutes);
 
 app.get("/health-check", (req, res) => {
   res.status(200).json({
